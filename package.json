@@ -12,7 +12,8 @@
     "build": "tsc",
     "prettier:write": "prettier --write .",
     "prettier": "prettier --check .",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,11 @@
     "ts-jest": "^29.1.0"
   },
   "lint-staged": {
-    "**/*": "eslint --fix && prettier --write --ignore-unknown"
+    "*.{js, jsx,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write --ignore-unknown"
+    ]
   }
 }
