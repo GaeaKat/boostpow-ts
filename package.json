@@ -11,7 +11,8 @@
     "test": "jest",
     "build": "tsc",
     "prettier:write": "prettier --write .",
-    "prettier": "prettier --check ."
+    "prettier": "prettier --check .",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",

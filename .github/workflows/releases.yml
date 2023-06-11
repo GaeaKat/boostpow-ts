@@ -1,0 +1,16 @@
+name: Release
+run-name: Making a release
+on:
+  push:
+    branches:
+      - main
+      - "releases/**"
+jobs:
+  releasing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Conventional Changelog Action
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          github-token: ${{ secrets.github_token }}

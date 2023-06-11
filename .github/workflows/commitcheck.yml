@@ -1,0 +1,9 @@
+name: Check Names
+run-name: Check Commit Names
+on: [push, pull_request]
+jobs:
+  checking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: webiny/action-conventional-commits@v1.1.0
